@@ -108,6 +108,26 @@ html {
       letter-spacing: 0.5rem;
       text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
 
+.stories {
+  position: relative;
+  padding: 15rem 0;
+  text-align: center; }
+  .stories__title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    transition: all 0.5s;
+    user-select: none;
+    display: inline-block;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; }
+    .stories__title:hover {
+      letter-spacing: 0.5rem;
+      text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+
 .header {
   position: relative;
   height: 95vh;
@@ -366,3 +386,69 @@ html {
     .card__price-value {
       font-size: 6rem;
       font-weight: 100; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  padding: 6rem;
+  padding-left: 9rem;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.4rem;
+  transform: skewX(-12deg); }
+  .story__shape {
+    position: relative;
+    float: left;
+    width: 15rem;
+    height: 15rem;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    backface-visibility: hidden;
+    overflow: hidden; }
+    .story__shape img {
+      height: 100%;
+      transform: translateX(-4rem) scale(1.2);
+      transition: all 0.5s; }
+    .story__shape figcaption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      opacity: 0;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      text-align: center;
+      transition: all 0.5s; }
+  .story:hover .story__shape img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(2px) brightness(80%); }
+  .story:hover .story__shape figcaption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story__text {
+    text-align: left;
+    transform: skewX(12deg);
+    backface-visibility: hidden; }
+    .story__text h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      letter-spacing: 1px; }
+    .story__text p {
+      font-size: 1.6rem; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }

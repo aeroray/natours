@@ -40,3 +40,10 @@
   text-align: center;
   @include heading-styled;
 }
+
+.stories {
+  position: relative;
+  padding: 15rem 0;
+  text-align: center;
+  @include heading-styled;
+}
