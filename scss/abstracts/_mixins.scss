@@ -5,3 +5,32 @@
     clear: both;
   }
 }
+
+@mixin linear-text {
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@mixin heading-styled {
+  &__title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    transition: all 0.5s;
+    user-select: none;
+    @include linear-text;
+
+    &:hover {
+      letter-spacing: 0.5rem;
+      text-shadow: 0 0.5rem 1rem rgba($color-black, 0.1);
+    }
+  }
+}
