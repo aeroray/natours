@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/aeroray/natours/issues"
   },
-  "homepage": "https://github.com/aeroray/natours#readme",
+  "homepage": "https://aeroray.github.io/natours/index.html",
   "dependencies": {
     "node-sass": "^4.14.1"
   }
