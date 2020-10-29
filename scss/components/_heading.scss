@@ -13,6 +13,11 @@
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: moveInLeft 2s;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 6rem;
+    }
   }
   &--sub {
     display: block;
@@ -20,5 +25,9 @@
     font-weight: 700;
     letter-spacing: 1.5rem;
     animation: moveInRight 2s;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }

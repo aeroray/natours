@@ -28,9 +28,58 @@
     user-select: none;
     @include linear-text;
 
+    @include respond(tab-port) {
+      letter-spacing: 0.1rem;
+      font-size: 3rem;
+    }
+
+    @include respond(phone) {
+      letter-spacing: 0;
+      font-size: 3rem;
+    }
+
     &:hover {
-      letter-spacing: 0.5rem;
+      letter-spacing: 0.2rem;
       text-shadow: 0 0.5rem 1rem rgba($color-black, 0.1);
+    }
+  }
+}
+
+//Media Query Manager
+/*
+  0 - 600px: Phone
+  600- 900px: Tablet Portrait
+  900-1200px: Tablet Landscape
+  1200-1800px: Normal
+  1800+px: Big Desktop
+  1em = 16px
+
+  Order: Base => Layout + Grid => Components
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    //600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    //900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    //1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    //1800px
+    @media (min-width: 112.5em) {
+      @content;
     }
   }
 }

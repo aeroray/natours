@@ -14,6 +14,9 @@
     border-top: 1px solid rgba($color-white, 0.2);
     padding-top: 2rem;
     display: inline-block;
+    @include respond(phone) {
+      padding-top: 1rem;
+    }
   }
 
   &__list {
@@ -40,5 +43,9 @@
     width: 80%;
     border-top: 1px solid rgba($color-white, 0.2);
     padding-top: 2rem;
+  }
+
+  @include respond(phone) {
+    padding: 8rem 0;
   }
 }

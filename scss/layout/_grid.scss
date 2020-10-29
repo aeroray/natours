@@ -1,8 +1,21 @@
 .row {
   max-width: $grid-width;
+
+  @include respond(tab-port) {
+    max-width: $grid-width-md;
+    padding: 0 3rem;
+  }
+
+  @include respond(phone) {
+    max-width: $grid-width-sm;
+  }
+
   margin: 0 auto;
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-sm;
+    }
   }
   @include clearfix;
 
@@ -10,6 +23,9 @@
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      @include respond(tab-port) {
+        margin-right: $gutter-horizontal-sm;
+      }
     }
   }
 
