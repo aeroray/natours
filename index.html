@@ -13,6 +13,33 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="nav-toggle" />
+      <label for="nav-toggle" class="navigation__button">
+        <span class="navigation__icon"></span>
+      </label>
+      <div class="navigation__bg"></div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">About Natours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Your Benifits</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Popular Tours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Book Now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <a href="/" class="header__logo">
         <img src="img/logo-white.png" alt="Logo" />
@@ -21,7 +48,9 @@
       <h1 class="heading">
         <span class="heading--primary">outdoors</span>
         <span class="heading--sub">is where life happens</span>
-        <a href="#" class="btn btn--white btn--animated">Discover Our Tours</a>
+        <a href="#tours" class="btn btn--white btn--animated">
+          Discover Our Tours
+        </a>
       </h1>
     </header>
 
@@ -123,7 +152,7 @@
         </div>
       </section>
 
-      <section class="tours">
+      <section class="tours" id="tours">
         <h2 class="tours__title mb-8">Most popular tours</h2>
         <div class="row">
           <div class="col-1-of-3">
@@ -147,7 +176,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$299.99</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book Now</a>
+                  <a href="#popup" class="btn btn--white">Book Now</a>
                 </div>
               </div>
             </div>
@@ -173,7 +202,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$499.99</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book Now</a>
+                  <a href="#popup" class="btn btn--white">Book Now</a>
                 </div>
               </div>
             </div>
@@ -201,7 +230,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$899.99</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book Now</a>
+                  <a href="#popup" class="btn btn--white">Book Now</a>
                 </div>
               </div>
             </div>
@@ -355,5 +384,28 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left"></div>
+        <div class="popup__right">
+          <a href="#tours" class="popup__close">&times;</a>
+          <h2 class="popup__title">Booking Now</h2>
+          <h3 class="popup__tip">
+            Important &ndash; Please read these terms before booking
+          </h3>
+          <p class="popup__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ad
+            dolorem saepe quo, quae iure earum quam vero iste eveniet commodi
+            maxime, consequuntur minima debitis corporis incidunt temporibus, ut
+            aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Maiores ad dolorem saepe quo, quae iure earum quam vero iste eveniet
+            commodi maxime, consequuntur minima debitis corporis incidunt
+            temporibus, ut aspernatur.
+          </p>
+          <a href="#" class="btn btn--green">Book Now</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
